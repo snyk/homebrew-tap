@@ -1,5 +1,8 @@
 name: "Update Snyk Homebrew formula with latest release"
-on: push
+on:
+  schedule:
+    # Run's once a day
+    - cron:  "0 0 * * *"
 
 jobs:
   brew:
