@@ -29,8 +29,8 @@ jobs:
           # Update origin with token
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           # Checkout the branch so we can push back to it
-          git checkout $HEAD_REF
+          git checkout master
           # Commit and push _just_ the specs
           git add Formula/snyk.rb
           git commit -m "${COMMIT_MSG}"
-          git push --set-upstream origin master
+          git push origin master
