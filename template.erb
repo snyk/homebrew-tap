@@ -1,0 +1,17 @@
+class Snyk < Formula
+  desc "Find & fix known vulnerabilities in open-source dependencies"
+  homepage "https://github.com/snyk/snyk"
+
+  url "<%= @url %>"
+  version "<%= @version %>"
+  sha256 "<%= @sha256 %>"
+
+  def install
+    mv "snyk-macos", "snyk"
+    bin.install "snyk"
+  end
+
+  test do
+    system "#{bin}/snyk --version"
+  end
+end
