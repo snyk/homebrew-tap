@@ -2,14 +2,17 @@ name: "Update Snyk Homebrew formula with latest release"
 on:
   - push
   - schedule:
-      - cron:  '0 * * * *'
+      - cron: "0 * * * *"
 
 jobs:
   brew:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Render latest template
-        uses: actions/docker/cli@master
+      - name: Set up Ruby 2.6
+        uses: actions/setup-ruby@v1
         with:
-          args: run --rm ruby:2.5 -w /github/workspace/ ruby render.rb
+          ruby-version: 2.6.x
+      - name: Render latest template
+        run: |
+          ruby render.rb
