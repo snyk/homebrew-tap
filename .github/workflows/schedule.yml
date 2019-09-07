@@ -6,6 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+        with:
+          ref: master
       - name: Set up Ruby 2.6
         uses: actions/setup-ruby@v1
         with:
@@ -16,7 +18,6 @@ jobs:
       - name: Commit to repository
         env:
           GITHUB_TOKEN: ${{ secrets.github_token }}
-          HEAD_REF: ${{ github.head_ref }}
           COMMIT_MSG: |
             build: spec
             skip-checks: true
@@ -32,4 +33,4 @@ jobs:
           # Commit and push _just_ the specs
           git add Formula/snyk.rb
           git commit -m "${COMMIT_MSG}"
-          git push --set-upstream origin "${HEAD_REF}"
+          git push --set-upstream origin master
