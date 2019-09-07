@@ -17,5 +17,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          git config user.email "gareth@morethanseven.net"
+          git config user.name "Gareth Rushgrove"
           git commit -a -m "Automatically updated to latest Snyk release"
           git push origin master
