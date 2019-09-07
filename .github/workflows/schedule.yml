@@ -19,5 +19,6 @@ jobs:
         run: |
           git config user.email "gareth@morethanseven.net"
           git config user.name "Gareth Rushgrove"
-          git commit -a -m "Automatically updated to latest Snyk release"
+          git add Formula/snyk.rb
+          git commit -m "Automatically updated to latest Snyk release"
           git push origin master
