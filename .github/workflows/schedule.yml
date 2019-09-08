@@ -7,7 +7,7 @@ on:
       - "*"
       - "!README.md"
   schedule:
-    # Run once a day
+    # Run workflow once a day to grab latest Snyk release
     - cron: "0 0 * * *"
 
 jobs:
