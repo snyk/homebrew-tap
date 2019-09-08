@@ -1,5 +1,17 @@
 #! /usr/bin/env ruby
 
+#
+# This script grabs the latest release details from the GitHub API for a project
+# and then generates a Homebrew Formula.
+#
+# It currently assumes you have separate binaries for Linux and macOS and generates
+# a forumula which works with both homebrew and linuxbrew.
+#
+# This is intended for cases where projects release quickly and you want a Homebrew Tap
+# to track those releases closely, and where you don't have automation (like
+# Goreleaser) which can generate Homebrew Formula automatically.
+#
+
 require "erb"
 require "json"
 require "open-uri"
