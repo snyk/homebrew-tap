@@ -1,8 +1,14 @@
 name: "Update Snyk Homebrew formula with latest release"
 on:
+  push:
+    branches:
+      - master
+    paths:
+      - "*"
+      - "!README.md"
   schedule:
     # Run once a day
-    - cron:  "0 0 * * *"
+    - cron: "0 0 * * *"
 
 jobs:
   brew:
