@@ -1,7 +1,7 @@
 name: "Update Snyk Homebrew formula with latest release"
 on:
   schedule:
-    # Run's once a day
+    # Run once a day
     - cron:  "0 0 * * *"
 
 jobs:
@@ -32,5 +32,5 @@ jobs:
           # Checkout the branch so we can push back to it
           git checkout master
           git add Formula/snyk.rb
-          git commit -m "${COMMIT_MSG}"
-          git push origin master
+          # Only commit and push if we have changes
+          git diff --quiet && git diff --staged --quiet || (git commit -m "${COMMIT_MSG}"; git push origin master)
