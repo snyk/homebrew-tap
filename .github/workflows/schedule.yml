@@ -30,8 +30,8 @@ jobs:
             skip-checks: true
         run: |
           # Hard-code user config
-          git config user.email "gareth@morethanseven.net"
-          git config user.name "Gareth Rushgrove"
+          git config user.email "snyksec@users.noreply.github.com"
+          git config user.name "Snyk"
           git config --get-regexp "user\.(name|email)"
           # Update origin with token
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
