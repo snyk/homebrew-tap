@@ -1,14 +1,14 @@
 class Snyk < Formula
   desc "Find & fix known vulnerabilities in open-source dependencies"
   homepage "https://github.com/snyk/snyk"
-  version "v1.243.0"
+  version "v1.244.0"
 
   if OS.mac?
-    url "https://github.com/snyk/snyk/releases/download/v1.243.0/snyk-macos"
-    sha256 "eae8b704a14aa6af2196c503e3049d075695bc8f385e50d43935f041356b7014"
+    url "https://github.com/snyk/snyk/releases/download/v1.244.0/snyk-macos"
+    sha256 "cef49e6f66416f020ef7762685522a32841a964dd0a7688a11dc0de05e383a35"
   elsif OS.linux?
-    url "https://github.com/snyk/snyk/releases/download/v1.243.0/snyk-linux"
-    sha256 "945e58302fd3958416f6532af8209d5b4a8844f198eaa07ef11630b00e17a3fb"
+    url "https://github.com/snyk/snyk/releases/download/v1.244.0/snyk-linux"
+    sha256 "d6771cecd9feb46861acb90b4f7062aa5f3d6fc269aa4c18d4282c4f2851b437"
   end
 
   def install
