@@ -12,9 +12,7 @@ class Snyk < Formula
   end
 
   def install
-    original = OS.linux? ? "snyk-linux" : "snyk-macos"
-    mv original, "snyk"
-    bin.install "snyk"
+    bin.install (OS.linux? ? "snyk-linux" : "snyk-macos") => "snyk"
   end
 
   test do
