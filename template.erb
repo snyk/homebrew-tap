@@ -16,6 +16,6 @@ class Snyk < Formula
   end
 
   test do
-    system "#{bin}/snyk --version"
+    assert_match("Authentication failed.", shell_output("#{bin}/snyk auth homebrew-test", 2))
   end
 end
