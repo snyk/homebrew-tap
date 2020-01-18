@@ -12,12 +12,10 @@ class Snyk < Formula
   end
 
   def install
-    original = OS.linux? ? "snyk-linux" : "snyk-macos"
-    mv original, "snyk"
-    bin.install "snyk"
+    bin.install (OS.linux? ? "snyk-linux" : "snyk-macos") => "snyk"
   end
 
   test do
-    system "#{bin}/snyk --version"
+    assert_match("Authentication failed.", shell_output("#{bin}/snyk auth homebrew-test", 2))
   end
 end
