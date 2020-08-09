@@ -38,7 +38,7 @@ end
 @url, @sha256, @version = get_latest_release(PROJECT, "#{BIN}-macos")
 @url_linux, @sha256_linux, _ = get_latest_release(PROJECT, "#{BIN}-linux")
 
-template = File.read("template.erb")
+template = File.read(File.join(__dir__, "template.erb")
 
 renderer = ERB.new(template)
 puts renderer.result()

@@ -21,7 +21,7 @@ jobs:
           ruby-version: 2.6.x
       - name: Render latest template
         run: |
-          ruby render.rb | tee Formula/snyk.rb
+          ruby script/render.rb | tee Formula/snyk.rb
       - name: Commit to repository
         env:
           GITHUB_TOKEN: ${{ secrets.github_token }}
