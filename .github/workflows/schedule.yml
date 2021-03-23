@@ -1,14 +1,11 @@
-name: "Update Snyk Homebrew formula with latest release"
+name: 'Update Snyk Homebrew formula with latest release'
 on:
   push:
     branches:
       - master
-    paths:
-      - "*"
-      - "!README.md"
   schedule:
     # Run workflow once a day to grab latest Snyk release
-    - cron: "0 0 * * *"
+    - cron: '0 0 * * *'
 
 jobs:
   brew:
