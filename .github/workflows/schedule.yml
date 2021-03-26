@@ -1,11 +1,11 @@
-name: 'Update Snyk Homebrew formula with latest release'
+name: "Update Snyk Homebrew formula with latest release"
 on:
   push:
     branches:
       - master
   schedule:
     # Run workflow once a day to grab latest Snyk release
-    - cron: '0 0 * * *'
+    - cron: "0 0 * * *"
 
 jobs:
   brew:
@@ -19,6 +19,10 @@ jobs:
       - name: Render latest template
         run: |
           ruby script/render.rb | tee Formula/snyk.rb
+      - name: Lint Ruby Files
+        run: |
+          gem install rubocop
+          rubocop -l
       - name: Commit to repository
         env:
           GITHUB_TOKEN: ${{ secrets.github_token }}
