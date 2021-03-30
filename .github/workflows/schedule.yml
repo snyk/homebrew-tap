@@ -36,4 +36,4 @@ jobs:
           git checkout master
           git add Formula/snyk.rb
           # Only commit and push if we have changes
-          git diff --quiet && git diff --staged --quiet || (git commit -m "${COMMIT_MSG}"; git push origin master)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "${COMMIT_MSG}"; git push origin master --force)
