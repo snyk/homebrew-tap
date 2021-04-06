@@ -1,0 +1,15 @@
+on: push
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Set up Ruby 2.6
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: 2.6.x
+      - name: Lint Ruby Files
+        run: |
+          gem install rubocop
+          rubocop -l
