@@ -1,7 +1,7 @@
 class Snyk < Formula
   desc "Find & fix known vulnerabilities in open-source dependencies"
   homepage "https://github.com/snyk/snyk"
-  version "1.684.0"
+  version "1.684.1"
 
   if OS.mac?
     url "https://static.snyk.io/cli/dev/v1.684.1/snyk-macos"
