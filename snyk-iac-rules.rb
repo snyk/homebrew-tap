@@ -12,22 +12,22 @@ class SnykIacRules < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.2.1/snyk-iac-rules_0.2.1_Darwin_x86_64.tar.gz"
-      sha256 "6474ec59ba94bc1f17be7e483252655f38a06c0b20adf063f0a6a8687ef06e18"
+      sha256 "26faf209a61ae3cb1283288e1732b97a497968847c8355a637c41c200edbb483"
     end
     if Hardware::CPU.arm?
       url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.2.1/snyk-iac-rules_0.2.1_Darwin_arm64.tar.gz"
-      sha256 "19657e0a9d303c05e75512d3da9be967ef0d01d772ed6298fa3723e169c4b2de"
+      sha256 "9fe4fe84a5bb5638fa67bacba328aed1b18d16d65d0336821793134713e8a86a"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.2.1/snyk-iac-rules_0.2.1_Linux_x86_64.tar.gz"
-      sha256 "d32ca90bec84b67f763691abc774560c228f6bd33dd626c3115322ea7516fa4f"
+      sha256 "4deee74770a1cda724f78fb286b5923401ecb3d6cc30140a3b5200f4f347b5a8"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.2.1/snyk-iac-rules_0.2.1_Linux_arm64.tar.gz"
-      sha256 "eca5d114d03b7b1f294df08611418d43321c8cdd0ece6461f7d7c4359259c399"
+      sha256 "c0e7f273d3e1a94c33371243b32052db7100dd4b2753be1d7195c3326ece7101"
     end
   end
 
