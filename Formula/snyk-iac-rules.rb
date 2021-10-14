@@ -5,29 +5,29 @@
 class SnykIacRules < Formula
   desc "Write, debug, test, and bundle custom rules for Snyk Infrastructure as Code."
   homepage "https://snyk.io/"
-  version "0.3.0"
+  version "0.3.1"
   license "Apache-2.0"
   bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.3.0/snyk-iac-rules_0.3.0_Darwin_arm64.tar.gz"
-      sha256 "b5617162dc4cff0a7d21eaa2c2dea00f11036498ac26751b50911f333ed30586"
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.3.0/snyk-iac-rules_0.3.0_Darwin_x86_64.tar.gz"
-      sha256 "7a904156c22271a6eb4d7154c6d54046c05d57bcb380be582c2052533a8c6aa0"
+      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.3.1/snyk-iac-rules_0.3.1_Darwin_x86_64.tar.gz"
+      sha256 "850396d9a56581e930bea1fab5520cbe1f25440e21e161e096388293cea9638c"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.3.1/snyk-iac-rules_0.3.1_Darwin_arm64.tar.gz"
+      sha256 "004eb9ee64e9551b12d70f36e4f0db0c64392e5ab634ec2eec33b13e2d185f87"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.3.0/snyk-iac-rules_0.3.0_Linux_arm64.tar.gz"
-      sha256 "41ef98bc575a08eb830a2b864de6c31fcbb76bddf777265e2d325e5c20c43577"
+      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.3.1/snyk-iac-rules_0.3.1_Linux_arm64.tar.gz"
+      sha256 "fc4e7640ef9671f66eee458d60a9808edc8ab5dfd03342196885acc328bb872f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.3.0/snyk-iac-rules_0.3.0_Linux_x86_64.tar.gz"
-      sha256 "20668fac96d0b2cc1836ccfb5a6d8109df8652b52c242e16378ea85517046a72"
+      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.3.1/snyk-iac-rules_0.3.1_Linux_x86_64.tar.gz"
+      sha256 "4dfb18721cc68d086c483c67021b871ce1bd43908236fecfc7e028ffc4e866d7"
     end
   end
 
