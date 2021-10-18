@@ -5,29 +5,29 @@
 class SnykIacRules < Formula
   desc "Write, debug, test, and bundle custom rules for Snyk Infrastructure as Code."
   homepage "https://snyk.io/"
-  version "0.3.1"
+  version "0.4.0"
   license "Apache-2.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.3.1/snyk-iac-rules_0.3.1_Darwin_x86_64.tar.gz"
-      sha256 "850396d9a56581e930bea1fab5520cbe1f25440e21e161e096388293cea9638c"
+      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.4.0/snyk-iac-rules_0.4.0_Darwin_x86_64.tar.gz"
+      sha256 "c9035cdafbb87056363d5468be0b7f0807550e3b719141cd003a59ab39c155a8"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.3.1/snyk-iac-rules_0.3.1_Darwin_arm64.tar.gz"
-      sha256 "004eb9ee64e9551b12d70f36e4f0db0c64392e5ab634ec2eec33b13e2d185f87"
+      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.4.0/snyk-iac-rules_0.4.0_Darwin_arm64.tar.gz"
+      sha256 "b290dadfb7bb74d2510fbef251ee3f6278274f82f09ad035ea5c021e4096253f"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.3.1/snyk-iac-rules_0.3.1_Linux_arm64.tar.gz"
-      sha256 "fc4e7640ef9671f66eee458d60a9808edc8ab5dfd03342196885acc328bb872f"
+      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.4.0/snyk-iac-rules_0.4.0_Linux_arm64.tar.gz"
+      sha256 "ea34e0af93be587607adff112e056c1d72eb9fa916910d1bf9a6d467d0acfe77"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.3.1/snyk-iac-rules_0.3.1_Linux_x86_64.tar.gz"
-      sha256 "4dfb18721cc68d086c483c67021b871ce1bd43908236fecfc7e028ffc4e866d7"
+      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.4.0/snyk-iac-rules_0.4.0_Linux_x86_64.tar.gz"
+      sha256 "6c5ecb2e16e7a59c2991b0ec6356676267b22789ef963c335ed26cb00122ee42"
     end
   end
 
