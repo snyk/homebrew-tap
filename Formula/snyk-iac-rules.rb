@@ -5,29 +5,29 @@
 class SnykIacRules < Formula
   desc "Write, debug, test, and bundle custom rules for Snyk Infrastructure as Code."
   homepage "https://snyk.io/"
-  version "0.4.0"
+  version "0.4.1"
   license "Apache-2.0"
   bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.4.0/snyk-iac-rules_0.4.0_Darwin_x86_64.tar.gz"
-      sha256 "c9035cdafbb87056363d5468be0b7f0807550e3b719141cd003a59ab39c155a8"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.4.0/snyk-iac-rules_0.4.0_Darwin_arm64.tar.gz"
-      sha256 "b290dadfb7bb74d2510fbef251ee3f6278274f82f09ad035ea5c021e4096253f"
+      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.4.1/snyk-iac-rules_0.4.1_Darwin_arm64.tar.gz"
+      sha256 "9c8c2a1621e3e54ee3d6a04e6959375cdcc3406d8baa368d04a9bc8503ede4be"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.4.1/snyk-iac-rules_0.4.1_Darwin_x86_64.tar.gz"
+      sha256 "32badfc86e92eb13efff49bcc5609dd390fe36d021b875f6cecf1d4149cb6beb"
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.4.0/snyk-iac-rules_0.4.0_Linux_arm64.tar.gz"
-      sha256 "ea34e0af93be587607adff112e056c1d72eb9fa916910d1bf9a6d467d0acfe77"
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.4.0/snyk-iac-rules_0.4.0_Linux_x86_64.tar.gz"
-      sha256 "6c5ecb2e16e7a59c2991b0ec6356676267b22789ef963c335ed26cb00122ee42"
+      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.4.1/snyk-iac-rules_0.4.1_Linux_x86_64.tar.gz"
+      sha256 "8d68ddc325a1089ba5f5054e47ca94b884c9288b4d17b9412745124e7b848c51"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.4.1/snyk-iac-rules_0.4.1_Linux_arm64.tar.gz"
+      sha256 "57588a25dd722d9931cd4050662e3995de9d1eca07c19d825ce91c51d38be8f7"
     end
   end
 
