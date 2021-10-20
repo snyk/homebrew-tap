@@ -5,29 +5,29 @@
 class SnykIacRules < Formula
   desc "Write, debug, test, and bundle custom rules for Snyk Infrastructure as Code."
   homepage "https://snyk.io/"
-  version "0.4.1"
+  version "0.4.2"
   license "Apache-2.0"
   bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.4.1/snyk-iac-rules_0.4.1_Darwin_arm64.tar.gz"
-      sha256 "9c8c2a1621e3e54ee3d6a04e6959375cdcc3406d8baa368d04a9bc8503ede4be"
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.4.1/snyk-iac-rules_0.4.1_Darwin_x86_64.tar.gz"
-      sha256 "32badfc86e92eb13efff49bcc5609dd390fe36d021b875f6cecf1d4149cb6beb"
+      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.4.2/snyk-iac-rules_0.4.2_Darwin_x86_64.tar.gz"
+      sha256 "4c0d1d0a5718798170047713b1dfb4d840fcd619be9ebe746e0f95dd745a2dcf"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.4.2/snyk-iac-rules_0.4.2_Darwin_arm64.tar.gz"
+      sha256 "f45b687c9de6c65585568e42651f9dee4423f3fe78193ba33b45f8915e4d0dfa"
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.4.1/snyk-iac-rules_0.4.1_Linux_x86_64.tar.gz"
-      sha256 "8d68ddc325a1089ba5f5054e47ca94b884c9288b4d17b9412745124e7b848c51"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.4.1/snyk-iac-rules_0.4.1_Linux_arm64.tar.gz"
-      sha256 "57588a25dd722d9931cd4050662e3995de9d1eca07c19d825ce91c51d38be8f7"
+      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.4.2/snyk-iac-rules_0.4.2_Linux_arm64.tar.gz"
+      sha256 "4075df09f48f8532ef26080b56625da7bfa7ab73a40714bb9364d5e1477b3ceb"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/snyk/snyk-iac-rules/releases/download/v0.4.2/snyk-iac-rules_0.4.2_Linux_x86_64.tar.gz"
+      sha256 "fdab12feecd25f23f58cd95048a0c899087b605daedfb36b005930c68f4ef8ed"
     end
   end
 
