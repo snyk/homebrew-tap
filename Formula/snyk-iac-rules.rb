@@ -5,21 +5,21 @@
 class SnykIacRules < Formula
   desc "Write, debug, test, and bundle custom rules for Snyk Infrastructure as Code."
   homepage "https://snyk.io/"
-  version "1.1.0"
+  version "1.1.1"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/snyk/snyk-iac-rules/releases/download/v1.1.0/snyk-iac-rules_1.1.0_Darwin_x86_64.tar.gz"
-      sha256 "f52db10629482a9e9def3983718cbed5504f384882b36b256229ca569110d4b8"
+    if Hardware::CPU.arm?
+      url "https://github.com/snyk/snyk-iac-rules/releases/download/v1.1.1/snyk-iac-rules_1.1.1_Darwin_arm64.tar.gz"
+      sha256 "6571bcf9de291398addef099a37c1732efb0d94801f47f8ff99a589a7dbc0265"
 
       def install
         bin.install "snyk-iac-rules"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/snyk/snyk-iac-rules/releases/download/v1.1.0/snyk-iac-rules_1.1.0_Darwin_arm64.tar.gz"
-      sha256 "770c218f7551760d7d4c4cc6a24174643a3f2c4a212946986a31f473c79fc437"
+    if Hardware::CPU.intel?
+      url "https://github.com/snyk/snyk-iac-rules/releases/download/v1.1.1/snyk-iac-rules_1.1.1_Darwin_x86_64.tar.gz"
+      sha256 "b49d7b80619f7bf3401f75ddcb0abb282c853c9fcb08591a223f52765a55e743"
 
       def install
         bin.install "snyk-iac-rules"
@@ -29,16 +29,16 @@ class SnykIacRules < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/snyk/snyk-iac-rules/releases/download/v1.1.0/snyk-iac-rules_1.1.0_Linux_x86_64.tar.gz"
-      sha256 "78c1e8bb5a573bcdf5cfa076bbbdcc5c407a86dd22e52afaf210efae2fe33e1e"
+      url "https://github.com/snyk/snyk-iac-rules/releases/download/v1.1.1/snyk-iac-rules_1.1.1_Linux_x86_64.tar.gz"
+      sha256 "47fb69038cb0a13b72daf74bc6673a2be072c230280e5130fdde3cbb1cfdeb82"
 
       def install
         bin.install "snyk-iac-rules"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/snyk/snyk-iac-rules/releases/download/v1.1.0/snyk-iac-rules_1.1.0_Linux_arm64.tar.gz"
-      sha256 "5a1899a48137e981a2b6b9f270fe72922bd1f7a2b24734b67e4a7c5901145418"
+      url "https://github.com/snyk/snyk-iac-rules/releases/download/v1.1.1/snyk-iac-rules_1.1.1_Linux_arm64.tar.gz"
+      sha256 "4cfcb68df0adc8d3806c29917d184e541c6278d82b4d91d346c06e9f81efa995"
 
       def install
         bin.install "snyk-iac-rules"
