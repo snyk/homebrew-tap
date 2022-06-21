@@ -11,7 +11,7 @@ class SnykIacRules < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/snyk/snyk-iac-rules/releases/download/v1.5.3/snyk-iac-rules_1.5.3_Darwin_arm64.tar.gz"
-      sha256 "e8b4ea1e4a147fa890958cebf10b7f265f784e18574633de5442cee81d9631ed"
+      sha256 "ff43e1fe5e94cbe2ec23d86632ac0490ef884746e1cd2e3b8dacc0c56ddc538a"
 
       def install
         bin.install "snyk-iac-rules"
@@ -19,7 +19,7 @@ class SnykIacRules < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/snyk/snyk-iac-rules/releases/download/v1.5.3/snyk-iac-rules_1.5.3_Darwin_x86_64.tar.gz"
-      sha256 "12906ef74ffdc3178d480737d843938016de8a3daf9ff310a80da0733711d874"
+      sha256 "e4976ea321d6da1af3df2fbd4775564a58970101261a98c6ed10b2ec3dd79e63"
 
       def install
         bin.install "snyk-iac-rules"
@@ -30,7 +30,7 @@ class SnykIacRules < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/snyk/snyk-iac-rules/releases/download/v1.5.3/snyk-iac-rules_1.5.3_Linux_arm64.tar.gz"
-      sha256 "8737d8897a200f2966f3d06151c6fb73ff1ff4f182787b9419f3318e6ad40c51"
+      sha256 "a1127940db54ac913643d50502c2db33858dcea75bf7773d4774ce25b08e3fdf"
 
       def install
         bin.install "snyk-iac-rules"
@@ -38,7 +38,7 @@ class SnykIacRules < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/snyk/snyk-iac-rules/releases/download/v1.5.3/snyk-iac-rules_1.5.3_Linux_x86_64.tar.gz"
-      sha256 "e1c07662289b86003da8c965c9327ed2172705e0c01c044497257739fa33e84f"
+      sha256 "8787ffd94e39c929052c389d4b186e5e4e2bdd0ff1e08e66ae9b1f065f152ba5"
 
       def install
         bin.install "snyk-iac-rules"
