@@ -13,10 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Set up Ruby 2.6
+      - name: Set up Ruby 3.2
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6
+          ruby-version: 3.2
       - name: Render latest template
         run: |
           ruby script/render.rb | tee Formula/snyk.rb
