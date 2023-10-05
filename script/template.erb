@@ -21,7 +21,7 @@ class Snyk < Formula
     def install
       bin.install ("snyk-linux") => "snyk"
     end
-  elsif OS.linux? && Hardware::CPU.intel?
+  elsif OS.linux? && Hardware::CPU.arm?
     url "<%= @url_linux_arm64 %>"
     sha256 "<%= @sha256_linux_arm64 %>"
     def install
