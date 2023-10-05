@@ -31,7 +31,7 @@ def get_latest_release(bin)
 end
 
 @url_macos, @sha256_macos, @version = get_latest_release("#{BIN}-macos")
-@url_macos_arm64, @sha256_macos_arm64, _ = get_latest_release("#{BIN}-macos-arm64 ")
+@url_macos_arm64, @sha256_macos_arm64, _ = get_latest_release("#{BIN}-macos-arm64")
 @url_linux, @sha256_linux, _ = get_latest_release("#{BIN}-linux")
 @url_linux_arm64, @sha256_linux_arm64, _ = get_latest_release("#{BIN}-linux-arm64")
 
