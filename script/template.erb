@@ -3,16 +3,30 @@ class Snyk < Formula
   homepage "https://github.com/snyk/snyk"
   version "<%= @version %>"
 
-  if OS.mac?
-    url "<%= @url %>"
-    sha256 "<%= @sha256 %>"
-  elsif OS.linux?
+  if OS.mac? && Hardware::CPU.intel?
+    url "<%= @url_macos  %>"
+    sha256 "<%= @sha256_macos %>"
+    def install
+      bin.install ("snyk-macos") => "snyk"
+    end
+  elsif OS.mac? && Hardware::CPU.arm?
+    url "<%= @url_macos_arm64 %>"
+    sha256 "<%= @sha256_macos_arm64 %>"
+    def install
+      bin.install ("snyk-macos-arm64") => "snyk"
+    end
+  elsif OS.linux? && Hardware::CPU.intel?
     url "<%= @url_linux %>"
     sha256 "<%= @sha256_linux %>"
-  end
-
-  def install
-    bin.install (OS.linux? ? "snyk-linux" : "snyk-macos") => "snyk"
+    def install
+      bin.install ("snyk-linux") => "snyk"
+    end
+  elsif OS.linux? && Hardware::CPU.intel?
+    url "<%= @url_linux_arm64 %>"
+    sha256 "<%= @sha256_linux_arm64 %>"
+    def install
+      bin.install ("snyk-linux-arm64") => "snyk"
+    end
   end
 
   test do
