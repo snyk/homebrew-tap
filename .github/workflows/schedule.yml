@@ -26,7 +26,7 @@ jobs:
           rubocop -l
       - name: Commit to repository
         env:
-          GITHUB_TOKEN: ${{ secrets.github_token }}
+          GITHUB_TOKEN: ${{ secrets.HAMMERHEAD_GITHUB_TOKEN }}
           COMMIT_MSG: |
             Upgraded to latest Snyk version
             skip-checks: true
