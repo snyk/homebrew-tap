@@ -16,14 +16,14 @@ class Snyk < Formula
       bin.install ("snyk-macos-arm64") => "snyk"
     end
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://static.snyk.io/cli/v1.1262.0/snyk-linux"
-    sha256 "cb0c8bf1c11e6571c33f920b6c3de3c81a5a8f276e18f3193587582b041a878a"
+    url "https://static.snyk.io/cli/v1.1263.0/snyk-linux"
+    sha256 "074e5314f93eb380a18f119354e77f58ef5d7eecf0f19274639db859578cb76d"
     def install
       bin.install ("snyk-linux") => "snyk"
     end
   elsif OS.linux? && Hardware::CPU.arm?
-    url "https://static.snyk.io/cli/v1.1262.0/snyk-linux-arm64"
-    sha256 "da2a26733a642be28d211dc37dfb033e2f78920179042fc7d35ca22e5eca3f5b"
+    url "https://static.snyk.io/cli/v1.1263.0/snyk-linux-arm64"
+    sha256 "6173899337b9d120ca6bb666c71f347ce408c5ca49f5ad70557340a75769c879"
     def install
       bin.install ("snyk-linux-arm64") => "snyk"
     end
