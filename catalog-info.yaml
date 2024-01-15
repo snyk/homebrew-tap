@@ -4,8 +4,8 @@ metadata:
   name: homebrew-tap
   annotations:
     github.com/project-slug: snyk/homebrew-tap
-    github.com/team-slug: snyk/hammerhead
+    github.com/team-slug: snyk/cli
 spec:
   type: supply-chain-tooling
   lifecycle: "-"
-  owner: hammerhead
+  owner: cli
