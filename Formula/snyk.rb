@@ -1,29 +1,29 @@
 class Snyk < Formula
   desc "Find & fix known vulnerabilities in open-source dependencies"
   homepage "https://github.com/snyk/snyk"
-  version "1.1282.1"
+  version "1.1283.0"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://static.snyk.io/cli/v1.1282.1/snyk-macos"
-    sha256 "9135068ac0aa73cbb6265fb0759d6a3eb08d5bcd110ad0ea657c2a0a0b9eb21a"
+    url "https://static.snyk.io/cli/v1.1283.0/snyk-macos"
+    sha256 "32797f7250afa598ff3a4a7ac7259891b7ce6224a1377afd927dd50640321e00"
     def install
       bin.install ("snyk-macos") => "snyk"
     end
   elsif OS.mac? && Hardware::CPU.arm?
-    url "https://static.snyk.io/cli/v1.1282.1/snyk-macos-arm64"
-    sha256 "a9a7664a8c08eb557a29698be8edaa4177917c4abbe7b729c8581161e5e17994"
+    url "https://static.snyk.io/cli/v1.1283.0/snyk-macos-arm64"
+    sha256 "83d3dcdf4512e88eed6db5dad1682d9726933bda8f7be3e5e132da7c7dd990ae"
     def install
       bin.install ("snyk-macos-arm64") => "snyk"
     end
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://static.snyk.io/cli/v1.1282.1/snyk-linux"
-    sha256 "48c3661bf9de41f1aff149ca676d57926df73e9dab85d8f6988a48019160ae01"
+    url "https://static.snyk.io/cli/v1.1283.0/snyk-linux"
+    sha256 "a499683208e32b82a1ef0ed27fcd043908a4cefc5b9f1c96c564bcf6c90e6690"
     def install
       bin.install ("snyk-linux") => "snyk"
     end
   elsif OS.linux? && Hardware::CPU.arm?
-    url "https://static.snyk.io/cli/v1.1282.1/snyk-linux-arm64"
-    sha256 "f733e28dbbaa1744e21e0c711d9ac4f977f491aecc01f8faa8b6d0d9d31814a5"
+    url "https://static.snyk.io/cli/v1.1283.0/snyk-linux-arm64"
+    sha256 "dcd247338ce59473ba4055a8daf1283c4d9d16c4a9736b8e1a2c999e9cd29c42"
     def install
       bin.install ("snyk-linux-arm64") => "snyk"
     end
