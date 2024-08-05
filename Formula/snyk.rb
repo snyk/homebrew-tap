@@ -4,25 +4,25 @@ class Snyk < Formula
   version "1.1292.2"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://static.snyk.io/cli/v1.1292.2/snyk-macos"
+    url "https://static.snyk.io/cli/v1.1292.2/snyk-macos?utm_source=HOMEBREW"
     sha256 "efd066d52799fa964d6912d2cd94629c2ed2b014617107a1497efff2e09ef567"
     def install
       bin.install ("snyk-macos") => "snyk"
     end
   elsif OS.mac? && Hardware::CPU.arm?
-    url "https://static.snyk.io/cli/v1.1292.2/snyk-macos-arm64"
+    url "https://static.snyk.io/cli/v1.1292.2/snyk-macos-arm64?utm_source=HOMEBREW"
     sha256 "54fcb68f6c13de740aef597bfae3f8d5faeac5db24c6c2f0040f7946292a6517"
     def install
       bin.install ("snyk-macos-arm64") => "snyk"
     end
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://static.snyk.io/cli/v1.1292.2/snyk-linux"
+    url "https://static.snyk.io/cli/v1.1292.2/snyk-linux?utm_source=HOMEBREW"
     sha256 "4d4a81040a665428f3036f958a949621991a5501195d1345f17c260795009f1a"
     def install
       bin.install ("snyk-linux") => "snyk"
     end
   elsif OS.linux? && Hardware::CPU.arm?
-    url "https://static.snyk.io/cli/v1.1292.2/snyk-linux-arm64"
+    url "https://static.snyk.io/cli/v1.1292.2/snyk-linux-arm64?utm_source=HOMEBREW"
     sha256 "5ddc071b56d31769c98fa06234b80e13e17a4505056f867c96b5abe8aeb3e865"
     def install
       bin.install ("snyk-linux-arm64") => "snyk"
