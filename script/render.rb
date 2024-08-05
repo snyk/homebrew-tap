@@ -25,9 +25,15 @@ def get_latest_release(bin)
   obj = JSON.parse(data)
   version = obj["version"]
   url = obj["assets"][bin]["url"]
+  # Parse the URL and add the utm parameter
+  uri = URI.parse(url)
+  new_query_ar = URI.decode_www_form(uri.query || '') << ["utm_source", "HOMEBREW"]
+  uri.query = URI.encode_www_form(new_query_ar)
+  url_with_utm = uri.to_s
+
   sha256 = obj["assets"][bin]["sha256"].split.first
 
-  return url, sha256, version
+  return url_with_utm, sha256, version
 end
 
 @url_macos, @sha256_macos, @version = get_latest_release("#{BIN}-macos")
