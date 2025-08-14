@@ -1,29 +1,29 @@
 class Snyk < Formula
   desc "Find & fix known vulnerabilities in open-source dependencies"
   homepage "https://github.com/snyk/snyk"
-  version "1.1298.2"
+  version "1.1298.3"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://downloads.snyk.io/cli/v1.1298.2/snyk-macos?utm_source=HOMEBREW"
-    sha256 "bbf31a108032459d6f4ede1359d0790f426b3880b9400fae9a4eca220a8835da"
+    url "https://downloads.snyk.io/cli/v1.1298.3/snyk-macos?utm_source=HOMEBREW"
+    sha256 "c9d26776ee4122e94c5f15a4eb8b818e19f6c9eec8d9bea4f5650e71275ff5c7"
     def install
       bin.install ("snyk-macos") => "snyk"
     end
   elsif OS.mac? && Hardware::CPU.arm?
-    url "https://downloads.snyk.io/cli/v1.1298.2/snyk-macos-arm64?utm_source=HOMEBREW"
-    sha256 "0a5016d8ec007483fc3397ea06c4f655a3771c3bee34fb778b8bb12c5b19ed9a"
+    url "https://downloads.snyk.io/cli/v1.1298.3/snyk-macos-arm64?utm_source=HOMEBREW"
+    sha256 "db50a50cf8e1a64872de90ae3a0133ea7d151e3f08950c61415b943b822d9573"
     def install
       bin.install ("snyk-macos-arm64") => "snyk"
     end
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://downloads.snyk.io/cli/v1.1298.2/snyk-linux?utm_source=HOMEBREW"
-    sha256 "83a661b4d69dd7e64fa198c1f5a3093f189666dd3a298c40f8f3e4d917404d7a"
+    url "https://downloads.snyk.io/cli/v1.1298.3/snyk-linux?utm_source=HOMEBREW"
+    sha256 "943cffd46891174b0f660a8d20d9e555910a178ca2f74dff98844b38388e49dd"
     def install
       bin.install ("snyk-linux") => "snyk"
     end
   elsif OS.linux? && Hardware::CPU.arm?
-    url "https://downloads.snyk.io/cli/v1.1298.2/snyk-linux-arm64?utm_source=HOMEBREW"
-    sha256 "b9aa533cfa4477eec032578390e6978647f919d8ca03029729235fc58a88d29d"
+    url "https://downloads.snyk.io/cli/v1.1298.3/snyk-linux-arm64?utm_source=HOMEBREW"
+    sha256 "efae6da3d1ada3dfc505809e6a59d3800b32359d62ca607669d5516d5440294b"
     def install
       bin.install ("snyk-linux-arm64") => "snyk"
     end
