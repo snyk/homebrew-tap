@@ -12,7 +12,9 @@ jobs:
   brew:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.HAMMERHEAD_GITHUB_TOKEN }}
       - name: Set up Ruby 3.2
         uses: ruby/setup-ruby@v1
         with:
@@ -26,17 +28,14 @@ jobs:
           rubocop -l
       - name: Commit to repository
         env:
-          GITHUB_TOKEN: ${{ secrets.HAMMERHEAD_GITHUB_TOKEN }}
           COMMIT_MSG: |
             Upgraded to latest Snyk version
             skip-checks: true
         run: |
           # Hard-code user config
           git config user.email "team-cli@snyk.io"
-          git config user.name "Team Hammerhead"
+          git config user.name "Team CLI"
           git config --get-regexp "user\.(name|email)"
-          # Update origin with token
-          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           # Checkout the branch so we can push back to it
           git checkout master
           git add Formula/snyk.rb
