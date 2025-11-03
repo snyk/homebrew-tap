@@ -7,10 +7,17 @@ on:
     # Run workflow once a day to grab latest Snyk release
     - cron: "0 0 * * *"
   workflow_dispatch:
+  repository_dispatch:
+    types:
+      - build_and_release
 
 jobs:
   brew:
     runs-on: ubuntu-latest
+    if: |
+      github.event_name == 'schedule' ||
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'repository_dispatch' && github.event.client_payload && github.event.client_payload.release_channel == 'stable')
     steps:
       - uses: actions/checkout@v4
         with:
