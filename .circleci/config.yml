@@ -12,6 +12,7 @@ jobs:
       - checkout
       - prodsec/security_scans:
           mode: auto
+          open-source-scan-reachability: false
 
 workflows:
   CICD:
