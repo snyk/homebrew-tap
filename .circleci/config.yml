@@ -12,6 +12,7 @@ jobs:
       - checkout
       - prodsec/security_scans:
           mode: auto
+          release-branch: master
 
 workflows:
   CICD:
@@ -27,4 +28,5 @@ workflows:
       - security-scans:
           context:
             - devex_cli
+            - endpoint-experience
             - prodsec-orb-runtime
